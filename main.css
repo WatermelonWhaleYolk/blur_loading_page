@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: black;
+  font-family: "Inter", sans-serif;
+}
+
+.loading span {
+  animation: blur 1.5s calc(var(--i) / 5 * 1s) alternate infinite;
+}
+
+@keyframes blur {
+  to {
+    filter: blur(5px);
+  }
+}
+
+.loader-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transition-property: all;
+    transition-duration: 0.3s;
+    background-color: white;
+}
+
+.hv-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.loading {
+    letter-spacing: 0.1em;
+    font-size: 1.875rem;
+    white-space: nowrap;
+}
