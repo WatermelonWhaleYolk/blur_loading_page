@@ -6,14 +6,27 @@ body {
 }
 
 .loading span {
-  animation: blur 1.5s calc(var(--i) / 5 * 1s) alternate infinite;
+  font-size: 2em;
+  animation: blur 2s alternate infinite;
 }
 
 @keyframes blur {
+  from {
+    filter: blur(3px);
+  }
   to {
-    filter: blur(5px);
+    filter: blur(0);
   }
 }
+
+.loading span:nth-child(1) {animation-delay: 0;}
+.loading span:nth-child(2) {animation-delay: 0.2s;}
+.loading span:nth-child(3) {animation-delay: 0.4s;}
+.loading span:nth-child(4) {animation-delay: 0.6s;}
+.loading span:nth-child(5) {animation-delay: 0.8s;}
+.loading span:nth-child(6) {animation-delay: 1s;}
+.loading span:nth-child(7) {animation-delay: 1.2s;}
+
 
 .loader-screen {
     position: fixed;
